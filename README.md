@@ -1,13 +1,13 @@
 # Single-Cell Type Annotation with XGBoost and CatBoost
 
 ## Overview
-This repository provides an approach to annotate single-cell data types using machine learning models, **XGBoost** and **CatBoost**. Single-cell type annotation helps understand cellular heterogeneity in biological systems.
+This repository provides an approach to annotate single-cell data types using machine learning models, **XGBoost** and **CatBoost**. Single-cell type annotation helps understand cellular heterogeneity in biological systems. There were 61 type of cells to annotate.
 
 ## Features
 - Preprocessing pipeline for normalization and feature selection.
 - Model training with XGBoost and CatBoost.
 - Feature importance analysis.
-- Evaluation using metrics like accuracy, F1-score, and ROC-AUC.
+- Evaluation using metrics like accuracy, macro avg, and weighted avg.
 
 ## Prerequisites
 ### Dependencies
@@ -17,35 +17,7 @@ pip install -r requirements.txt
 ```
 
 ### Data
-Prepare a single-cell dataset in CSV format with rows as cells, columns as features, and the last column as cell type labels.
-
-## Usage
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/recker77/single-cell-annotation.git
-   cd single-cell-annotation
-   ```
-
-2. **Prepare Your Dataset:**
-   Place your dataset in the `data/` folder (e.g., `single_cell_data.csv`).
-
-3. **Run the Pipeline:**
-   ```bash
-   python main.py --data data/single_cell_data.csv --output results/
-   ```
-
-4. **Results:**
-   Outputs in `results/` include trained model files, performance metrics, feature importance plots, and confusion matrices.
-
-## Repository Structure
-```plaintext
-.
-|-- data/                # Input dataset
-|-- results/             # Output folder
-|-- src/                 # Source code
-|-- main.py              # Entry point
-|-- requirements.txt     # Dependencies
-```
+The data has 162709 rows.
 
 ## Model Details
 - **XGBoost**: Gradient Boosting, tuned with Optuna.

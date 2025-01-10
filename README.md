@@ -69,7 +69,7 @@ The script generates the following outputs in the `results/` directory:
 ### XGBoost
 - Boosting Type: Gradient Boosting
 - Evaluation Metric: Multi-class Log Loss
-- Features: Tuned hyperparameters using grid search for optimal performance.
+- Features: Tuned hyperparameters using optuna for optimal performance.
 
 ### CatBoost
 - Boosting Type: Ordered Boosting
